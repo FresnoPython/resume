@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-4 col-md-4">
+			<h1> Projects </h1>
+		</div>
+	</div>
+	<div class="row">
+		{% for proj in projects %}
+		<a href = " {{ proj.gitrepo }} "><div class="col-md-4">
+			<h1> {{ proj.name }} </h1>
+			<p> {{ proj.description }} </p>
+			<h3> Languages </p>
+			<br>
+			{% for lang in proj.languages %}
+				<p> {{ lang }} </p>
+			{% endfor %}
+		</div></a>
+		{% endfor %}
+	</div>
+</div>

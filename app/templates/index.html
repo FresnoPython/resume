@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+<div class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class = "col-md-4">
+				<div class="row">
+					<img src = "{{ user.image }}" class="img-responsive">
+				</div>
+			</div> 
+			
+			<div class = "col-md-offset-1 col-md-6">
+				<div class="row"> 
+					<h1> Billy - About me</h1>
+				</div>
+			</div>
+			<div class = "col-md-6">
+				<ul>
+					{% for desc in user.desc %}
+						<li> <h3>{{ desc }} </h3> </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</div>
+</div>
+{% include 'projects.html' %}
+{% include 'contact.html' %}
+{% endblock %}
